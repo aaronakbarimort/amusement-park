@@ -1,9 +1,11 @@
 $(document).ready(function() {
   var height = parseInt(prompt('Please enter your height in inches.'));
-
-  if (height > 48) {
-    $('#tall').show();
+  console.log();
+  if (height < 36) {
+    $('.short').css("background-color", "yellow");
+  } else if (height < 48) {
+    $('.medium').css("background-color", "yellow");
   } else {
-    $('#short').show();
+    $('.tall').css("background-color", "yellow");
   }
 });
